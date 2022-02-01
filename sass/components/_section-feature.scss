@@ -1,0 +1,85 @@
+.feature-section{
+    padding: 20rem 0 10rem;
+
+    background-image:linear-gradient(
+        to right bottom,
+        rgba(#DAD992, 0.8),
+        rgba($color-dark-red, 0.8))
+        ,url("../img/digital-marketing-large.jpg");
+    background-size: cover;
+    transform: skewY(-3deg) translateY(-4rem);
+    @include respond(small-screen){
+        padding: 10rem 0 10rem;
+    }
+    &>*{
+        transform: skewY(3deg);
+    }
+    .feature-row{
+        margin: 3rem;
+    }
+    .feature-col{
+        margin-bottom: 6rem;
+    }
+    .feature-box{
+        background-color: $color-white;
+        width: 90%;
+        height: 100%;
+        padding: 2rem 4rem;
+        border-radius: 1rem;
+        box-shadow: 0 2rem 3rem rgba($color-black,.5);
+        transition: all .3s ease-in-out;
+        margin: 0 auto;
+        @include respond(small-screen){
+            width: 95%;
+        }
+        &:hover{
+            transform: translateY(-1rem) scale(1.02);
+            box-shadow: 0 2rem 4rem rgba($color-black,.7);
+        }
+        &__icon{
+            font-size: 7rem;
+      margin-bottom: .5rem;
+      display: inline-block;
+      background-image: linear-gradient(to right,$color-light-red,$color-dark-red);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+        }
+        @include respond(x-large-screen){
+            font-size: 8rem;
+        }
+        @include respond(medium-screen){
+            font-size: 10rem;
+            padding-bottom: 5rem;
+        }
+    }
+    .feature-heading{
+        font-size: 2.3rem;
+        margin: 0 0 1.3rem;
+        font-weight: bold;
+        @include respond(medium-screen){
+            font-size: 3.3rem;
+        }
+        @include respond(small-screen){
+            font-size: 3.6rem;
+        }
+    }
+    .feature-para{
+        font-size: 1.4rem;
+        line-height: 1.6;
+        font-weight: 500;
+        columns: $color-grey-dark;
+
+        @include respond(x-large-screen){
+            font-size: 1.7rem;
+        }
+        @include respond(large-screen){
+            font-size: 2.2rem;
+        }
+        @include respond(small-screen){
+            font-size: 2.2rem;
+            margin-top: 2rem;
+        }
+
+    }
+}

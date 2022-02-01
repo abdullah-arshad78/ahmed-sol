@@ -1,0 +1,84 @@
+
+.navbar{
+    background-color:$color-grey-light;
+    &-toggler{
+        width: 3rem;
+        @include flex-center;
+        font: 1.3rem;
+        font-weight: 200;
+        border: none;
+        color: $color-light-red;
+       
+        
+
+       
+
+    }
+
+}
+.logo__main{
+    width: 15rem;
+    // @media(max-width:36em){
+    //     width: 8rem;
+    // }
+    
+}
+.navbar-brand{
+    animation: moveInLeft 1s ease-in-out ;
+}
+
+.nav-link{
+    color:$color-dark-red;
+    font-size: 1.6rem;
+    &:hover,&:active{
+        color: color-light-red;
+    }
+    &:visited{
+        color:$color-dark-red;
+    }
+
+    @include respond(x-large-screen){
+        font-size: 1.8rem;
+    }
+    @include respond(large-screen){
+        font-size: 2rem;
+    }
+    @include respond(small-screen){
+        font-size: 2.5rem;
+    }
+    
+}
+.navbar-nav{
+    animation: moveInRight 1s ease-in-out ;
+}
+.custom-underline {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding: 2rem;
+    &,
+&:hover,
+&:focus,
+&:active {
+  text-decoration: none;
+}
+&::after{
+    content: "";
+    position: absolute;
+}
+
+  }
+
+  .box-a .custom-underline::after {
+    top: 65%;
+    height: 2px;
+    width: 0%;
+    left: 5%;
+    background-color: $color-light-red;
+      transition: 0.5s ease all .3s;
+  }
+  
+  .box-a:hover .custom-underline::after {
+    width: 90%;
+      transition: 0.3s ease all;
+  }

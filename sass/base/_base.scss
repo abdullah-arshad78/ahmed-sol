@@ -1,0 +1,25 @@
+*{
+    font-size: 62.5% ;
+
+    @include respond(xxx-large-screen){
+        font-size: 70%;
+    }
+
+    @include respond(x-large-screen){
+        font-size: 56.25%;
+    }
+    @include respond(large-screen){
+        font-size: 50%;
+    }
+    @include respond(medium-screen){
+        font-size: 45%;
+    }
+    @include respond(small-screen){
+        font-size: 35%;
+    }
+
+}
+
+body{
+    box-sizing: border-box;
+}
